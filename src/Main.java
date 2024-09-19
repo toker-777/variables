@@ -19,11 +19,11 @@ public class Main {
         System.out.println(b);
         int c = 1351098;
         System.out.println(c);
-        long d = -123456789;
+        long d = -123456789L;
         System.out.println(d);
-        float e = 40f;
+        float e = 40.0f;
         System.out.println(e);
-        double f = 306d;
+        double f = 306.0;
         System.out.println(f);
     }
 
