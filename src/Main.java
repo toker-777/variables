@@ -30,11 +30,11 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
 
-        float a = 27.12F;
+        float a = 27.12f;
         System.out.println(a);
         long b = 987678965549L;
         System.out.println(b);
-        double c = 2.786D;
+        double c = 2.786;
         System.out.println(c);
         short d = 569;
         System.out.println(d);
