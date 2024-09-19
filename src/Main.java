@@ -50,108 +50,92 @@ public class Main {
         System.out.println("Задача 3");
 
         byte ludmilaPavlovna = 23;
-        System.out.println("У Людмилы Петровны - " + ludmilaPavlovna + " ученика ");
         byte annaSergeevna = 27;
-        System.out.println("У Анны Сергеевны - " + annaSergeevna + " учеников ");
         byte ekaterinaAndreevna = 30;
-        System.out.println("У Екатерины Андреевной - " + ekaterinaAndreevna + " учеников ");
         short paper = 480;
+        System.out.println("У Людмилы Петровны - " + ludmilaPavlovna + " ученика ");
+        System.out.println("У Анны Сергеевны - " + annaSergeevna + " учеников ");
+        System.out.println("У Екатерины Андреевной - " + ekaterinaAndreevna + " учеников ");
         System.out.println("Всего закуплено - " + paper + " листов бумаги ");
-        byte sheetsOfPaper = (byte) (paper / (ludmilaPavlovna + annaSergeevna + ekaterinaAndreevna));
-        System.out.println("На одного ученика рассчитано - " + sheetsOfPaper + " листов бумаги ");
+        System.out.println("На одного ученика рассчитано - " + (paper / (ludmilaPavlovna + annaSergeevna + ekaterinaAndreevna)) + " листов бумаги ");
     }
 
     public static void task4() {
         System.out.println("Задача 4");
 
         byte machine = 16;
-        System.out.println("Производительность машины для изготовления бутылок за 2 минуты - " + machine + " бутылок ");
         byte productionOnTime = 2;
-        int oneMinuteProduction = (machine / productionOnTime);
-        System.out.println("За 1 минуту производится - " + oneMinuteProduction + " бутылок ");
-        int twentyMinute = oneMinuteProduction * 20;
-        System.out.println("За 20 минут производится - " + twentyMinute + " бутылок ");
-        int oneDay = (oneMinuteProduction * 60) * 24;
-        System.out.println("В сутки производится - " + oneDay + " бутылок ");
-        int threeDays = oneDay * 3;
-        System.out.println("За три дня производится - " + threeDays + " бутылок ");
-        int oneMonth = threeDays * 10;
-        System.out.println("В месяц производится - " + oneMonth + " бутылок ");
+        byte period = 20;
+        byte days = 1;
+        byte months = 1;
+        System.out.println("Производительность машины для изготовления бутылок за " + productionOnTime + " минут(ы) " + machine + " бутылок ");
+        System.out.println(" За " + period + " минут(ы) машина произвела - " + ((machine / productionOnTime) * period) + " штук бутылок");
+        System.out.println(" За " + days + " день машина произвела - " + ((machine * 60 * 24 / productionOnTime) * days) + " штук бутылок");
+        days = 3;
+        System.out.println(" За " + days + " дня(ей) машина произвела - " + ((machine * 60 * 24 / productionOnTime) * days) + " штук бутылок");
+        System.out.println(" За " + months + " месяц(ев) машина произвела - " + ((machine * 60 * 24 * 30 / productionOnTime) * months) + " штук бутылок");
+
+
     }
     public static void task5() {
         System.out.println("Задача 5");
 
-        int totalCans = 120;
-        System.out.println("Всего для ремонта школы требуется - " + totalCans + " банок краски ");
-        int whitePaints = 2;
-        System.out.println("На один класс требуется - " + whitePaints + " банки белой краски ");
-        int brownPaints = 4;
-        System.out.println("Также на один класс требуется - " + brownPaints + " банки коричневой краски ");
-        int allPaints = (whitePaints + brownPaints);
-        System.out.println("Всего для ремонта 1 класса требуется - " + allPaints + " банок с красками ");
-        int totalClasses = (totalCans / allPaints);
-        System.out.println("В школе всего - " + totalClasses + " классов ");
-        int allWhitePaints = (totalClasses * whitePaints);
-        System.out.println("Требуется - " + allWhitePaints + " белой краски на один класс ");
-        int allBrownPaints = (totalClasses * brownPaints);
-        System.out.println("Требуется - " + allBrownPaints + " коричневой краски на один класс ");
+        byte totalCans = 120;
+        byte whitePaints = 2;
+        byte brownPaints = 4;
+        byte clas = 1;
+        System.out.println("Всего для ремонта школы требуется - " + totalCans + " банок(ки) краски ");
+        System.out.println("На один класс требуется - " + whitePaints + " банок(ки) белой краски ");
+        System.out.println("Также на один класс требуется - " + brownPaints + " банок(ки) коричневой краски ");
+        System.out.println("Всего для ремонта " + clas + " класса(ов) требуется - " + (whitePaints + brownPaints) + " банок(ки) с разными красками ");
+        System.out.println("В школе всего - " + (totalCans  / (whitePaints + brownPaints))+ " класса(ов) ");
+        System.out.println("Требуется - " + (whitePaints * totalCans  / (whitePaints + brownPaints) + " белой краски на все классы "));
+        System.out.println("Требуется - " + (brownPaints * totalCans  / (whitePaints + brownPaints))+ " коричневой краски на все классы");
     }
     public static void task6() {
         System.out.println("Задача 6");
 
         byte banana = 80;
-        System.out.println("Один банан весит - " + banana + " грамм ");
         byte milk = 105;
-        System.out.println("100 мл молока весят - " + milk + " граммов ");
         byte iceCream = 100;
-        System.out.println("Один брикет мороженного пломбир весит - " + iceCream + " грамм ");
         byte rawEggs = 70;
+        System.out.println("Один банан весит - " + banana + " грамм ");
+        System.out.println("100 мл молока весят - " + milk + " граммов ");
+        System.out.println("Один брикет мороженного пломбир весит - " + iceCream + " грамм ");
         System.out.println("Одно сырое яйцо весит - " + rawEggs + " грамм ");
-        float mixBlender = (5 * banana + 2 * milk + 2 * iceCream + 4 * rawEggs);
-        System.out.println("Всего в блендере - " + mixBlender + " граммов ");
-        float kgBlender = mixBlender / 1000;
-        System.out.println("Или - " + kgBlender + " кг ");
+        System.out.println("Всего в блендере - " + (float)(5 * banana + 2 * (milk + iceCream) + 4 * rawEggs) / 1000 + " кг ");
     }
     public static void task7() {
         System.out.println("Задача 7");
 
         short smallLoss = 250;
-        System.out.println("Малая потеря в весе - " + smallLoss + " грамм ");
+        short loseWeight = 7000;
         short bigLoss = 500;
+        System.out.println("Малая потеря в весе - " + smallLoss + " грамм ");
         System.out.println("Большая потеря в весе - " + bigLoss + " грамм ");
-        short needToReset = 7000;
-        System.out.println("Всего нужно сбросить в весе - " + (needToReset / 1000) + " кг ");
-        int lowWeightLoss = needToReset / smallLoss;
-        System.out.println("При потере веса в " + smallLoss + " грамм, потребуется - " + lowWeightLoss + " дней ");
-        int bigWeightLoss = needToReset / bigLoss;
-        System.out.println("При потере веса в " + bigLoss + " грамм, потребуется - " + bigWeightLoss + " дней ");
+        System.out.println("Всего нужно сбросить в весе - " + (loseWeight / 1000) + " кг ");
+        System.out.println("При потере веса в " + smallLoss + " грамм в день, потребуется - " + (byte)(loseWeight / smallLoss) + " дней ");
+        System.out.println("При потере веса в " + bigLoss + " грамм в день, потребуется - " + (byte)(loseWeight / bigLoss) + " дней ");
     }
     public static void task8() {
         System.out.println("Задача 8");
 
         int mashaGetPaid = 67760;
-        System.out.println("Маша получает зарплату - " + mashaGetPaid + " рублей в месяц ");
         int denisGetPaid = 83690;
-        System.out.println("Денис получает зарплату - " + denisGetPaid + " рублей в месяй ");
         int cristinaGetPaid = 76230;
+        float increaseBy = 1.1f;
+        byte month = 1;
+        System.out.println("Маша получает зарплату - " + mashaGetPaid + " рублей в месяц ");
+        System.out.println("Денис получает зарплату - " + denisGetPaid + " рублей в месяй ");
         System.out.println("Кристина получает зарплату - " + cristinaGetPaid + " рублей в месяй ");
-        int oneYearMashaGet = 12 * mashaGetPaid;
-        System.out.println("В год Маша получает - " + oneYearMashaGet + " рублей ");
-        int oneYearDenisGet = 12 * denisGetPaid;
-        System.out.println("В год Денис получает - " + oneYearDenisGet + " рублей ");
-        int oneYearCristinaGet = 12 * cristinaGetPaid;
-        System.out.println("В год Кристина получает - " + oneYearCristinaGet + " рублей ");
-        int increaseSalaryMasha = (int) (mashaGetPaid * 1.1);
-        System.out.println("У Маши повыстся зарплата до - " + increaseSalaryMasha + " рублей ");
-        int increaseSalaryDenis =(int) (denisGetPaid * 1.1);
-        System.out.println("У Дениса повыстся зарплата до - " + increaseSalaryDenis + " рублей ");
-        int increaseSalaryCristina = (int)(cristinaGetPaid * 1.1);
-        System.out.println("У Кристины повыстся зарплата до - " + increaseSalaryCristina + " рублей ");
-        int incomeDifferenceMasha = 12 * increaseSalaryMasha - oneYearMashaGet;
-        System.out.println("Годовой доход у Маши вырос на " + incomeDifferenceMasha + " рублей ");
-        int incomeDifferenceDenis = 12 * increaseSalaryDenis - oneYearDenisGet;
-        System.out.println("Годовой доход у Дениса вырос на " + incomeDifferenceDenis + " рублей ");
-        int incomeDifferenceCristina = 12 * increaseSalaryCristina - oneYearCristinaGet;
-        System.out.println("Годовой доход у Кристины вырос на " + incomeDifferenceCristina + " рублей ");
+        System.out.println("В год Маша получает - " + 12 * month * mashaGetPaid + " рублей ");
+        System.out.println("В год Денис получает - " + 12 * month * denisGetPaid + " рублей ");
+        System.out.println("В год Кристина получает - " + 12 * month * cristinaGetPaid + " рублей ");
+        System.out.println("У Маши повыстся зарплата до - " + (int)(mashaGetPaid * increaseBy) + " рублей ");
+        System.out.println("У Дениса повыстся зарплата до - " + (int)(denisGetPaid * increaseBy) + " рублей ");
+        System.out.println("У Кристины повыстся зарплата до - " + (int)(cristinaGetPaid * increaseBy) + " рублей ");
+        System.out.println("Годовой доход у Маши вырос на " + (int)(12 * month * (mashaGetPaid * increaseBy - mashaGetPaid)) + " рублей ");
+        System.out.println("Годовой доход у Дениса вырос на " + (int)(12 * month * (denisGetPaid * increaseBy - denisGetPaid)) + " рублей ");
+        System.out.println("Годовой доход у Кристины вырос на " + (int)(12 * month * (cristinaGetPaid * increaseBy - cristinaGetPaid)) + " рублей ");
     }
 }
