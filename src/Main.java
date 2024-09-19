@@ -9,7 +9,6 @@ public class Main {
         task7();
         task8();
     }
-
     public static void task1() {
         System.out.println("Задача 1");
 
@@ -26,7 +25,6 @@ public class Main {
         double f = 306.0;
         System.out.println(f);
     }
-
     public static void task2() {
         System.out.println("Задача 2");
 
@@ -45,7 +43,6 @@ public class Main {
         byte g = 67;
         System.out.println(g);
     }
-
     public static void task3() {
         System.out.println("Задача 3");
 
@@ -59,7 +56,6 @@ public class Main {
         System.out.println("Всего закуплено - " + paper + " листов бумаги ");
         System.out.println("На одного ученика рассчитано - " + (paper / (ludmilaPavlovna + annaSergeevna + ekaterinaAndreevna)) + " листов бумаги ");
     }
-
     public static void task4() {
         System.out.println("Задача 4");
 
@@ -74,8 +70,6 @@ public class Main {
         days = 3;
         System.out.println(" За " + days + " дня(ей) машина произвела - " + ((machine * 60 * 24 / productionOnTime) * days) + " штук бутылок");
         System.out.println(" За " + months + " месяц(ев) машина произвела - " + ((machine * 60 * 24 * 30 / productionOnTime) * months) + " штук бутылок");
-
-
     }
     public static void task5() {
         System.out.println("Задача 5");
