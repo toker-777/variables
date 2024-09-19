@@ -49,15 +49,15 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
 
-        int ludmilaPavlovna = 23;
+        byte ludmilaPavlovna = 23;
         System.out.println("У Людмилы Петровны - " + ludmilaPavlovna + " ученика ");
-        int annaSergeevna = 27;
+        byte annaSergeevna = 27;
         System.out.println("У Анны Сергеевны - " + annaSergeevna + " учеников ");
-        int ekaterinaAndreevna = 30;
+        byte ekaterinaAndreevna = 30;
         System.out.println("У Екатерины Андреевной - " + ekaterinaAndreevna + " учеников ");
         short paper = 480;
         System.out.println("Всего закуплено - " + paper + " листов бумаги ");
-        int sheetsOfPaper = paper / (ludmilaPavlovna + annaSergeevna + ekaterinaAndreevna);
+        byte sheetsOfPaper = (byte) (paper / (ludmilaPavlovna + annaSergeevna + ekaterinaAndreevna));
         System.out.println("На одного ученика рассчитано - " + sheetsOfPaper + " листов бумаги ");
     }
 
