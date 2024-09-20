@@ -89,15 +89,18 @@ public class Main {
     public static void task6() {
         System.out.println("Задача 6");
 
-        byte banana = 80;
-        byte milk = 105;
-        byte iceCream = 100;
-        byte rawEggs = 70;
-        System.out.println("Один банан весит - " + banana + " грамм ");
-        System.out.println("100 мл молока весят - " + milk + " граммов ");
-        System.out.println("Один брикет мороженного пломбир весит - " + iceCream + " грамм ");
-        System.out.println("Одно сырое яйцо весит - " + rawEggs + " грамм ");
-        System.out.println("Всего в блендере - " + (float)(5 * banana + 2 * (milk + iceCream) + 4 * rawEggs) / 1000 + " кг ");
+        byte howManyBanana = 5;
+        short howMachMilk = 200;
+        byte howMuchIceCream = 2;
+        byte howMuchRawEggs = 4;
+        byte bananaWeight = 80;
+        byte hundredMlMilk = 100;
+        byte milkWeight = 105;
+        byte iceCreamWeight = 100;
+        byte rawEggsWeight = 70;
+        int i = howManyBanana * bananaWeight + (howMachMilk / hundredMlMilk) * milkWeight + howMuchIceCream * iceCreamWeight + howMuchRawEggs * rawEggsWeight;
+        System.out.println(" всего в блендере - " + i + " грамм(ов) коктейля ");
+        System.out.println(" Или " + (float) i / 1000 + " кг ");
     }
     public static void task7() {
         System.out.println("Задача 7");
@@ -105,11 +108,9 @@ public class Main {
         short smallLoss = 250;
         short loseWeight = 7000;
         short bigLoss = 500;
-        System.out.println("Малая потеря в весе - " + smallLoss + " грамм ");
-        System.out.println("Большая потеря в весе - " + bigLoss + " грамм ");
-        System.out.println("Всего нужно сбросить в весе - " + (loseWeight / 1000) + " кг ");
         System.out.println("При потере веса в " + smallLoss + " грамм в день, потребуется - " + (byte)(loseWeight / smallLoss) + " дней ");
         System.out.println("При потере веса в " + bigLoss + " грамм в день, потребуется - " + (byte)(loseWeight / bigLoss) + " дней ");
+        System.out.println("В среднем может потребоваться для похудения - " + (byte) ((loseWeight / smallLoss) + (loseWeight / bigLoss)) / 2 + " день(дней) ");
     }
     public static void task8() {
         System.out.println("Задача 8");
@@ -117,19 +118,26 @@ public class Main {
         int mashaGetPaid = 67760;
         int denisGetPaid = 83690;
         int cristinaGetPaid = 76230;
-        float increaseBy = 1.1f;
-        byte month = 1;
-        System.out.println("Маша получает зарплату - " + mashaGetPaid + " рублей в месяц ");
-        System.out.println("Денис получает зарплату - " + denisGetPaid + " рублей в месяй ");
-        System.out.println("Кристина получает зарплату - " + cristinaGetPaid + " рублей в месяй ");
-        System.out.println("В год Маша получает - " + 12 * month * mashaGetPaid + " рублей ");
-        System.out.println("В год Денис получает - " + 12 * month * denisGetPaid + " рублей ");
-        System.out.println("В год Кристина получает - " + 12 * month * cristinaGetPaid + " рублей ");
-        System.out.println("У Маши повыстся зарплата до - " + (int)(mashaGetPaid * increaseBy) + " рублей ");
-        System.out.println("У Дениса повыстся зарплата до - " + (int)(denisGetPaid * increaseBy) + " рублей ");
-        System.out.println("У Кристины повыстся зарплата до - " + (int)(cristinaGetPaid * increaseBy) + " рублей ");
-        System.out.println("Годовой доход у Маши вырос на " + (int)(12 * month * (mashaGetPaid * increaseBy - mashaGetPaid)) + " рублей ");
-        System.out.println("Годовой доход у Дениса вырос на " + (int)(12 * month * (denisGetPaid * increaseBy - denisGetPaid)) + " рублей ");
-        System.out.println("Годовой доход у Кристины вырос на " + (int)(12 * month * (cristinaGetPaid * increaseBy - cristinaGetPaid)) + " рублей ");
+        byte percentageIncrease = 10;
+        float increaseBy = (float)(percentageIncrease + 100) / 100;
+        byte year = 12;
+        System.out.println("Сейчас Маша получает зарплату - " + mashaGetPaid + " рубля(ей) в месяц.");
+        System.out.println("Годовой доход Маши - " + year * mashaGetPaid + " рубля(ей).");
+        System.out.println("При увеличении зарплаты на - " + percentageIncrease + " %, годовой доход составит - " + (int)(year * (mashaGetPaid * increaseBy)) + " рубля(ей).");
+        System.out.println("Разница между годовым доходом - " + (int)(year * (mashaGetPaid * increaseBy - mashaGetPaid)) + " рубля(ей)");
+        System.out.println("Теперь Маша получает зарплату - " + (int)(mashaGetPaid * increaseBy) + " рубля(ей) в месяц, что на - " + (int)(mashaGetPaid * increaseBy - mashaGetPaid) + " рубля(ей) в месяц больше, чем в прошлом году.");
+        System.out.println("...");
+        System.out.println("Сейчас Денис получает зарплату - " + denisGetPaid + " рубля(ей) в месяц.");
+        System.out.println("Годовой доход Дениса - " + year * denisGetPaid + " рубля(ей).");
+        System.out.println("При увеличении зарплаты на - " + percentageIncrease + " %, годовой доход составит - " + (int)(year * (denisGetPaid * increaseBy)) + " рубля(ей)");
+        System.out.println("Разница между годовым доходом - " + (int)(denisGetPaid * increaseBy) + " рубля(ей).");
+        System.out.println("Теперь Денис получает зарплату - " + (int)(denisGetPaid * increaseBy) + " рубля(ей) в месяц, что на - " + (int)(denisGetPaid * increaseBy - denisGetPaid) + " рубля(ей) в месяц больше, чем в прошлом году.");
+        System.out.println("...");
+        System.out.println("Сейчас Кристина получает зарплату - " + cristinaGetPaid + " рубля(ей) в месяц.");
+        System.out.println("Годовой доход Кристины - " + year * cristinaGetPaid + " рубля(ей).");
+        System.out.println("При увеличении зарплаты на - " + percentageIncrease + " %, годовой доход составит - " + (int)(year * (cristinaGetPaid * increaseBy)) + " рубля(ей)");
+        System.out.println("Разница между годовым доходом - " + (int)(year * (cristinaGetPaid * increaseBy - cristinaGetPaid)) + " рубля(ей).");
+        System.out.println("Теперь Кристина получает зарплату - " + (int)(cristinaGetPaid * increaseBy) + " рубля(ей) в месяц, что на - " + (int)(cristinaGetPaid * increaseBy - cristinaGetPaid) + " рубля(ей) в месяц больше, чем в прошлом году.");
+
     }
 }
